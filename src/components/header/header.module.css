@@ -1,0 +1,47 @@
+/* 
+리엑트에서는 css 파일 중첩을 방지하기 위해서
+.module.css 라는 형태로 스타일 중복방지 제공
+
+*/
+
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1152px;
+    margin: auto;
+    padding: 0 25px;
+    height: 150px;
+  }
+  
+  .headerContainer img{
+    width: 120px;
+    height: 120px;
+  }
+  
+  .headerContainer a{
+    color: white;
+  }
+
+  .headerContainer .active{
+    color: orange;
+  }
+  
+  .headerContainer ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2.4rem;
+    list-style: none;
+  }
+  
+  @media (max-width: 786px){
+    .headerContainer{
+      max-width: 680px;
+    }
+  
+    .headerContainer ul{
+      gap: 1.6rem;
+    }
+  }
