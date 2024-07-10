@@ -1,5 +1,6 @@
 import ImagePicker from '@/components/activities/image-picker'
 import styles from './page.module.css'
+import shareAction from '@/lib/actions'
 
 // 프론트엔드에서 서버로 데이터를 전송할떈
 // form, fetch, ...
@@ -12,7 +13,7 @@ export default function Share(){
                 </h1>
             </header>
             <main className={styles.main}>
-                <form className={styles.form}>
+                <form className={styles.form} action={shareAction}>
                     <div className={styles.row}>
                     <p>
                         <label htmlFor='name'>이름</label>
@@ -36,7 +37,7 @@ export default function Share(){
                         <label htmlFor='content'>내용</label>
                         <textarea id='content' name='content' rows='10' required></textarea>
                     </p>
-                    <ImagePicker/>
+                    <ImagePicker label='사진' name='image'/>
                     <p className={styles.actions}>
                         <button type='submit'>등록</button>
                     </p>

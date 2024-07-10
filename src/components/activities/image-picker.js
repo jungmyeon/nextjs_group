@@ -5,7 +5,7 @@ import styles from './image-picker.module.css'
 export default function ImagePicker({label,name}){
     return(
         <div className={styles.picker}>
-            <label></label>
+            <label htmlFor={name}>{label}</label>
             <div className={styles.file}>
                 <input type='file' id={name} name={name} accept='image/png, image/jpeg'/>
             </div>
